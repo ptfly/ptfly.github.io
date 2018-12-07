@@ -23,15 +23,15 @@
     <div id="onfido"></div>
     <script type="text/javascript">
 
-        function init()
+        function init(pToken)
         {
-            if(!window.token){
+            if(!pToken || !window.token){
                 document.getElementById('onfido').innerHTML = 'Token is missing!';
                 return;
             }
 
             const options = {
-                token:window.token,
+                token:window.token || pToken,
                 useModal:false,
                 steps:['document'],
                 containerId:'onfido',
