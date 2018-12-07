@@ -29,6 +29,9 @@
                 document.getElementById('onfido').innerHTML = 'Token is missing!';
                 return;
             }
+            else {
+                document.getElementById('onfido').innerHTML = '';
+            }
 
             const options = {
                 token:window.token || pToken,
