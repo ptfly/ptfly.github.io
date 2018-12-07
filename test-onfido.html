@@ -19,16 +19,14 @@
     </style>
 
 </head>
-<body>
+<body onload="init()">
     <div id="onfido"></div>
     <script type="text/javascript">
 
-        function init(token)
+        function init()
         {
-            alert(token);
-            
             const options = {
-                token:token,
+                token:window.token,
                 useModal:false,
                 steps:['document'],
                 containerId:'onfido',
