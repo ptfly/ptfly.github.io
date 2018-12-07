@@ -30,7 +30,7 @@
                 return;
             }
             else {
-                document.getElementById('onfido').innerHTML = '';
+                document.getElementById('onfido').innerHTML = window.token ? 'W: '+window.token : 'P: '+pToken;
             }
 
             const options = {
