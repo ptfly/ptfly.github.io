@@ -25,7 +25,10 @@
 
         function init()
         {
-            alert(window.token);
+            if(!window.token){
+                document.getElementById('onfido').innerHTML = 'Token is missing!';
+                return;
+            }
 
             const options = {
                 token:window.token,
